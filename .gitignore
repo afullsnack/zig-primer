@@ -1,0 +1,4 @@
+#editor
+.helix
+.zig-cache
+zig-out
