@@ -53,8 +53,16 @@ const Bottle = enum {
     coke,
     fanta,
     const amountDrank: u32 = 1000;
+    var milesRan: u64 = 1500;
 };
 
 test "enums can have var or const variables" {
     try std.testing.expect(Bottle.amountDrank == 1000);
+}
+
+test "get miles ran" {
+    const miles = Bottle.milesRan;
+
+    std.debug.print("Miles ran by bottle {}ml \n", .{miles});
+    try std.testing.expectEqual(miles, Bottle.milesRan);
 }

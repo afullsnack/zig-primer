@@ -38,7 +38,7 @@ test "if optional payload capture" {
     }
 
     var b: ?i32 = 5;
-    if (b) |*value| {
+    if (b) |*value| { // capture the value and dereference
         value.* += 1;
     }
 
